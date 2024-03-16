@@ -1,3 +1,5 @@
+
+
 const sideLinks = document.querySelectorAll('.sidebar .side-menu li a:not(.logout)');
 
 sideLinks.forEach(item => {
@@ -17,11 +19,11 @@ menuBar.addEventListener('click', () => {
   sideBar.classList.toggle('close');
 });
 
-const searchBtn = document.querySelector('.content nav form .form-input button');
-const searchBtnIcon = document.querySelector('.content nav form .form-input button .bx');
-const searchForm = document.querySelector('.content nav form');
+//const searchBtn = document.querySelector('.content nav form .form-input button');
+//const searchBtnIcon = document.querySelector('.content nav form .form-input button .bx');
+//const searchForm = document.querySelector('.content nav form');
 
-searchBtn.addEventListener('click', function (e) {
+/*searchBtn.addEventListener('click', function (e) {
   if (window.innerWidth < 576) {
     e.preventDefault;
     searchForm.classList.toggle('show');
@@ -44,13 +46,20 @@ window.addEventListener('resize', () => {
     searchForm.classList.remove('show');
   }
 });
+*/
 
-const toggler = document.getElementById('theme-toggle');
-
-toggler.addEventListener('change', function () {
-  if (this.checked) {
-    document.body.classList.add('dark');
-  } else {
-    document.body.classList.remove('dark');
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
   }
-});
+  return "";
+}

@@ -2,26 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" href="img/favicon.ico">
+  <link rel="icon" href="../img/favicon.ico">
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="/css/dashboardstyle.css">
+  <link rel="stylesheet" href="../css/dashboardstyle.css">
   <title>Caesar Dashboard</title>
 </head>
 <body>
 <div class="sidebar">
-  <a href="/dashboard.html" class="logo">
+  <a href="../dashboard.html" class="logo">
     <i class="bx bx-code-alt"></i>
     <div class="logo-name"><span>Caesar</span>Panel</div>
   </a>
   <ul class="side-menu">
-    <li><a href="/dashboard.html"><i class="bx bxs-dashboard"></i>Dashboard</a></li>
-    <li><a href="/team/index.html"><i class='bx bx-id-card'></i>Team</a></li>
-    <li><a href="#"><i class='bx bx-briefcase-alt-2'></i>Admin</a></li>
-    <li><a href="#"><i class='bx bx-cog'></i>Settings</a></li>
+    <li><a href="../dashboard.html"><i class="bx bxs-dashboard"></i>Dashboard</a></li>
+    <li class="active"><a href="../team/building.html"><i class='bx bx-hard-hat'></i>Building</a></li>
+    <li><a href="../team/development.html"><i class='bx bx-code-block'></i>Development</a></li>
+    <li><a href="../team/moderation.html"><i class='bx bx-shield-alt-2'></i>Moderation</a></li>
+    <li><a href="../team/leaders.html"><i class='bx bx-group'></i>Leaders</a></li>
+    <li><a href="../admin"><i class='bx bx-briefcase-alt-2'></i>Admin</a></li>
+    <li><a href="../settings"><i class='bx bx-cog'></i>Settings</a></li>
   </ul>
   <ul class="side-menu">
     <li>
@@ -39,9 +42,9 @@
     <form action="#">
       <div>
         <label>
-          <input type="search" placeholder="Search...">
+          <input type="search" placeholder="Search..." hidden>
         </label>
-        <button class="search-btn" type="submit"><i class='bx bx-search-alt-2'></i></button>
+        <button class="search-btn" type="submit" hidden><i class='bx bx-search-alt-2'></i></button>
       </div>
     </form>
     <input type="checkbox" id="theme-toggle" hidden>
@@ -51,7 +54,7 @@
       <span class="count">38</span> <!--Benachrichtigungen-->
     </a>
     <a href="#" class="profile">
-      <img src="img/logo.png">
+      <img src="../img/logo.png">
     </a>
   </nav>
 
@@ -59,19 +62,15 @@
     <!--End of Navbar-->
     <div class="header">
       <div class="left">
-    <!-- Insights -->
-    <div class="insights">
-
-      <h1>404 Page Not Found</h1>
-      <p>This page has been moved or deleted.</p>
-
-
+        <!-- Insights -->
+        <div class="insights">
+          <h1>Building Area</h1>
         </div>
       </div>
     </div>
   </main>
 </div>
-<script src="/js/sessionhandler.js"></script>
-<script src="/js/dashboard.js"></script>
+<script src="../js/sessionhandler.js"></script>
+<script src="../js/dashboard.js"></script>
 </body>
 </html>

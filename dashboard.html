@@ -13,18 +13,28 @@
 </head>
 <body>
   <div class="sidebar">
-    <a href="index.html" class="logo">
+    <a href="dashboard" class="logo">
       <i class="bx bx-code-alt"></i>
       <div class="logo-name"><span>Caesar</span>Panel</div>
     </a>
     <ul class="side-menu">
-      <li class="active"><a href="#"><i class="bx bxs-dashboard"></i>Dashboard</a></li>
-      <li><a href="#"><i class='bx bx-hard-hat'></i>Building</a></li>
-      <li><a href="#"><i class='bx bx-code-block'></i>Development</a></li>
-      <li><a href="#"><i class='bx bx-shield-alt-2'></i>Moderation</a></li>
-      <li><a href="#"><i class='bx bx-group'></i>Leaders</a></li>
-      <li><a href="#"><i class='bx bx-briefcase-alt-2'></i>Admin</a></li>
-      <li><a href="#"><i class='bx bx-cog'></i>Settings</a></li>
+      <li class="active"><a href="./dashboard"><i class="bx bxs-dashboard"></i>Dashboard</a></li>
+      <!--<li><a href="/team/index.html"><i class='bx bx-id-card'></i>Team</a></li>-->
+      <li class="dropdown" id="dropdown">
+        <a href="#" id="dropdown-toggle" class="dropdown-toggle"><i class='bx bx-id-card'></i>Team</a>
+        <ul id="dropdown-menu" class="dropdown-menu">
+          <li><a href="/team/building"><i class='bx bx-hard-hat dropdown-content'></i>Building</a></li>
+          <li><a href="/team/development"><i class='bx bx-code-block dropdown-content'></i>Development</a></li>
+          <li><a href="/team/moderation"><i class='bx bx-shield-alt-2 dropdown-content'></i>Moderation</a></li>
+          <li><a href="/team/leaders"><i class='bx bx-group dropdown-content'></i>Leaders</a></li>
+        </ul>
+      </li>
+      <li class="dm-hide"></li>
+      <li class="dm-hide"></li>
+      <li class="dm-hide"></li>
+      <li class="dm-hide"></li>
+      <li><a href="/admin"><i class='bx bx-briefcase-alt-2'></i>Admin</a></li>
+      <li><a href="./settings"><i class='bx bx-cog'></i>Settings</a></li>
     </ul>
     <ul class="side-menu">
       <li>
@@ -42,25 +52,24 @@
       <form action="#">
         <div>
           <label>
-            <input type="search" placeholder="Search...">
+            <input type="search" placeholder="Search..." hidden="">
           </label>
-          <button class="search-btn" type="submit"><i class='bx bx-search-alt-2'></i></button>
+          <button class="search-btn" type="submit" hidden><i class='bx bx-search-alt-2'></i></button>
         </div>
       </form>
       <input type="checkbox" id="theme-toggle" hidden>
       <label for="theme-toggle" class="theme-toggle"></label>
       <a href="#" class="notif">
         <i class='bx bx-bell'></i>
-        <span class="count">38</span> <!--Benachrichtigungs Counter-->
+        <span class="count">0</span> <!--Benachrichtigungen-->
       </a>
       <a href="#" class="profile">
         <img src="img/logo.png">
       </a>
     </nav>
-    <!--End of Navbar-->
-  </div>
 
   <main>
+      <!--End of Navbar-->
     <div class="header">
       <div class="left">
         <h1>Dashboard</h1>
@@ -72,10 +81,6 @@
           <li><a href="#" class="active">Shop</a></li>
         </ul>
       </div>
-      <a href="#" class="report">
-        <i class='bx bx-cloud-download'></i>
-        <span>Download CSV</span>
-      </a>
     </div>
     <!-- Insights -->
     <ul class="insights">
@@ -107,7 +112,7 @@
       <li><i class='bx bx-dollar-circle'></i>
         <span class="info">
           <h3>
-            $6,742
+            $60,742
           </h3>
           <p>Total Sales</p>
         </span>
@@ -118,7 +123,7 @@
       <div class="orders">
         <div class="header">
           <i class='bx bx-receipt'></i>
-          <h3>Recent Orders</h3>
+          <h3>Last Tickets</h3>
           <i class='bx bx-filter'></i>
           <i class='bx bx-search'></i>
         </div>
@@ -126,7 +131,7 @@
           <thead>
           <tr>
             <th>User</th>
-            <th>Order Date</th>
+            <th>Creation Date</th>
             <th>Status</th>
           </tr>
           </thead>
@@ -134,7 +139,7 @@
           <tr>
             <td>
               <img src="images/profile-1.jpg">
-              <p>John Doe</p>
+              <p>JustBricky</p>
             </td>
             <td>14-08-2023</td>
             <td><span class="status completed">Completed</span></td>
@@ -142,7 +147,7 @@
           <tr>
             <td>
               <img src="images/profile-1.jpg">
-              <p>John Doe</p>
+              <p>JustBricky</p>
             </td>
             <td>14-08-2023</td>
             <td><span class="status pending">Pending</span></td>
@@ -150,7 +155,7 @@
           <tr>
             <td>
               <img src="images/profile-1.jpg">
-              <p>John Doe</p>
+              <p>JustBricky</p>
             </td>
             <td>14-08-2023</td>
             <td><span class="status process">Processing</span></td>
@@ -184,7 +189,7 @@
           <li class="not-completed">
             <div class="task-title">
               <i class='bx bx-x-circle'></i>
-              <p>Play Footbal</p>
+              <p>Play Minecraft</p>
             </div>
             <i class='bx bx-dots-vertical-rounded'></i>
           </li>
@@ -193,6 +198,9 @@
       <!-- End of Reminders-->
     </div>
   </main>
+  </div>
   <script src="js/dashboard.js"></script>
+  <script src="js/darkmode.js"></script>
+  <!--<script src="js/sessionhandler.js"></script>-->
 </body>
 </html>

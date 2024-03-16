@@ -49,6 +49,24 @@ body{
   overflow-x: hidden;
 }
 
+#dropdown-menu {
+  opacity: 0;
+  transition: all 0.5s ease;
+  height: auto;
+}
+#dropdown-menu .open {
+  opacity: 1;
+  position: absolute;
+  padding-bottom: 20px;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+}
+
+#dropdown .open {
+  padding-bottom: 20px;
+}
+
 .sidebar{
   position: fixed;
   top: 0;
@@ -171,7 +189,7 @@ body{
 
 .content{
   position: relative;
-  width: 100%;
+  width: calc(100% - 230px);
   left: 230px;
   transition: all 0.3s ease;
 }
